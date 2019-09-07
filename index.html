@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liga</title>
+
+    <style>
+        img {
+
+            width: 50%;
+            height: 50%;
+        }
+
+        #liga {
+
+            margin: auto;
+            position: absolute;
+            top: 500px;
+            left: 550px;
+            background-color: rgb(235, 235, 44);
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+
+        #desliga {
+
+            margin: auto;
+            position: absolute;
+            top: 550px;
+            left: 550px;
+            background-color: rgb(241, 14, 14);
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="img" src="false.png" alt=""><br>
+    <input id="liga" type="button" value="Ligar" onclick="ligar ()">
+    <input id="desliga" type="button" value="Desligar" onclick="desligar ()">
+    <audio id = "audio" src=""></audio>
+    
+
+</body>
+
+<script>
+
+    function ligar() {
+
+        var img = document.getElementById("img")
+        img.src = "true.png"
+        var som = document.getElementById ("audio")
+        som.src = "liga.wav"
+        som.play ()
+
+    }
+
+    function desligar() {
+
+        var img = document.getElementById("img")
+        img.src = "false.png"
+        var som = document.getElementById ("audio")
+        som.src = "desliga.mp3"
+        som.play ()
+
+
+    }
+
+
+</script>
+
+</html>
